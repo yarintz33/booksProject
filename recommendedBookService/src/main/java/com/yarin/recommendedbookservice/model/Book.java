@@ -5,17 +5,14 @@ public class Book {
     private String title;
     private int rating;
 
-    // Default constructor
     public Book() {}
 
-    // Constructor with all fields
     public Book(int id, String title, int rating) {
         this.id = id;
         this.title = title;
         this.rating = rating;
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -40,12 +37,4 @@ public class Book {
         this.rating = rating;
     }
 
-    // @Override
-    // public String toString() {
-    //     return "Book{" +
-    //             "id=" + id +
-    //             ", title='" + title + '\'' +
-    //             ", rating=" + rating +
-    //             '}';
-    // }
 } 

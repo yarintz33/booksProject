@@ -22,10 +22,8 @@ public class RecommendationService {
 
     public List<Book> getRecommendedBooks() {
         try {
-            // Call the book service to get all books
             List<Book> allBooks = bookServiceClient.getAllBooks();
             
-            // Sort books by rating in descending order (highest rating first)
             return allBooks.stream()
                     .sorted(Comparator.comparing(Book::getRating, Comparator.nullsLast(Comparator.reverseOrder())))
                     .collect(Collectors.toList());
