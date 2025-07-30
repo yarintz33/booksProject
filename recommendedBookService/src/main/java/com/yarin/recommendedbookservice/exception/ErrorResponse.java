@@ -4,16 +4,13 @@ public class ErrorResponse {
     private int httpCode;
     private String message;
 
-    // Default constructor
     public ErrorResponse() {}
 
-    // Constructor with all fields
     public ErrorResponse(int httpCode, String message) {
         this.httpCode = httpCode;
         this.message = message;
     }
 
-    // Getters and Setters
     public int getHttpCode() {
         return httpCode;
     }

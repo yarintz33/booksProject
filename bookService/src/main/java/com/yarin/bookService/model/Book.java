@@ -17,17 +17,14 @@ public class Book {
     @NotNull(message = "Rating is required")
     private Integer rating;
     
-    // Default constructor
     public Book() {}
     
-    // Constructor with all fields
     public Book(Integer id, String title, Integer rating) {
         this.id = id;
         this.title = title;
         this.rating = rating;
     }
     
-    // Getters and Setters
     public Integer getId() {
         return id;
     }
