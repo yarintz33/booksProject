@@ -8,17 +8,13 @@ import jakarta.validation.constraints.*;
 public class Book {
     
     @Id
-    @Min(value = 0, message = "ID must be between 0 and 20")
-    @Max(value = 20, message = "ID must be between 0 and 20")
+    @NotNull(message = "ID is required")
     private Integer id;
-    
+   
     @NotBlank(message = "Title is required")
-    @Size(max = 50, message = "Title must be up to 50 characters")
     private String title;
     
     @NotNull(message = "Rating is required")
-    @Min(value = 1, message = "Rating must be between 1 and 10")
-    @Max(value = 10, message = "Rating must be between 1 and 10")
     private Integer rating;
     
     // Default constructor
