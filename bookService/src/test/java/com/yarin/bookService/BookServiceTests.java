@@ -21,13 +21,13 @@ class BookServiceTests {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private BookRepository bookRepository;
+    // @Autowired
+    // private BookRepository bookRepository;
 
-    @BeforeEach
-    void setUp() {
-        bookRepository.deleteAll();
-    }
+    // @BeforeEach
+    // void setUp() {
+    //     bookRepository.deleteAll();
+    // }
 
     @Test
     void testCreateBook() {

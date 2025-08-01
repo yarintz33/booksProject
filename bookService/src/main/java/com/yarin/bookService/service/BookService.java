@@ -25,8 +25,12 @@ public class BookService {
     }
     
     public Book getBookById(int id) {
-        return bookRepository.findById(id)
-                .orElseThrow(() -> new BookNotFoundException(id));
+        Optional<Book> book = bookRepository.findById(id);
+        if (book.isPresent()) {
+            return book.get();
+        } else {
+            throw new BookNotFoundException(id);
+        }
     }
     
     public Book createBook(Book book) {
