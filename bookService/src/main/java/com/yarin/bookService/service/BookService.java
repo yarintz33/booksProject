@@ -39,6 +39,9 @@ public class BookService {
         if (title == null || title.trim().isEmpty()) {
             errorMessage = "Invalid title - cannot be blank";
         }
+        if(title.length() > 50) {
+            errorMessage = "Invalid title - must be less than 50 characters";
+        }
         if (book.getRating() == null || book.getRating() < 1 || book.getRating() > 10) {
             errorMessage = "Invalid rating - must be between 1 and 10";
         }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.core.ParameterizedTypeReference;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -29,7 +30,7 @@ public class RecommendationService {
             List<Book> allBooks = webClient.get()
                     .uri(bookServiceUrl + "/api/books")
                     .retrieve()
-                    .bodyToMono(new org.springframework.core.ParameterizedTypeReference<List<Book>>() {})
+                    .bodyToMono(new ParameterizedTypeReference<List<Book>>() {})
                     .block();
             
             Collections.sort(allBooks, Comparator.comparing(Book::getRating, Comparator.nullsLast(Comparator.reverseOrder())));

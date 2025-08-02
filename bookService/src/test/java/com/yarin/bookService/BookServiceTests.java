@@ -2,9 +2,7 @@ package com.yarin.bookService;
 
 import com.yarin.bookService.exception.BookNotFoundException;
 import com.yarin.bookService.model.Book;
-import com.yarin.bookService.repository.BookRepository;
 import com.yarin.bookService.service.BookService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
